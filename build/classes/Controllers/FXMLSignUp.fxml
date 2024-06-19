@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.FXMLSignUpController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: white;">
+         <top>
+            <HBox style="-fx-background-color: #0080FF;" BorderPane.alignment="CENTER_LEFT">
+               <BorderPane.margin>
+                  <Insets top="10.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Registrarse" wrappingWidth="354.93671774864197">
+                     <font>
+                        <Font name="SansSerif Bold" size="60.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="67.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/PngItem_3943260.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane prefHeight="68.0" prefWidth="378.0" />
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="100.0" prefWidth="839.0">
+                     <children>
+                        <Button id="shiny" fx:id="bCancel" layoutX="96.0" layoutY="26.0" mnemonicParsing="false" onAction="#atras" onMouseMoved="#mano" prefHeight="42.0" prefWidth="150.0" style="-fx-background-color: #63C9EA;" stylesheets="@../stylesheet.css" text="Atrás" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/cancel_white.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button id="shiny" fx:id="bAccept" layoutX="461.0" layoutY="26.0" mnemonicParsing="false" onAction="#registrarse" onMouseMoved="#mano" prefHeight="42.0" prefWidth="150.0" style="-fx-background-color: #6EED1C;" stylesheets="@../stylesheet.css" text="Registrarse" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/accept_white.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Label layoutX="326.0" layoutY="38.0" text="(*) Campos obligatorios">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="error" layoutX="326.0" textFill="RED">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="50.0" fitWidth="65.0" layoutX="760.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/efw.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <AnchorPane prefHeight="315.0" prefWidth="756.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="305.0" layoutY="4.0" prefHeight="320.0" prefWidth="512.0">
+                     <children>
+                        <HBox prefHeight="51.0" prefWidth="595.0">
+                           <children>
+                              <VBox prefHeight="50.0" prefWidth="354.0">
+                                 <children>
+                                    <Label text="Nombre*" textFill="#0080ff">
+                                       <font>
+                                          <Font name="Gadugi" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="name" onKeyPressed="#entername" prefWidth="244.0" promptText="Apodo" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </VBox>
+                              <StackPane prefHeight="68.0" prefWidth="338.0">
+                                 <children>
+                                    <Label fx:id="errorname2" prefHeight="67.0" prefWidth="238.0" text="Nombre de usuario ya existente" textFill="RED" visible="false" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="errorname" prefHeight="67.0" prefWidth="335.0" text="Debe tener entre 6 y 15 caracteres o dígitos sin espacios, pudiendo usar guiones o sub-guiones" textFill="RED" visible="false" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="52.0" prefWidth="375.0">
+                                 <children>
+                                    <Label prefHeight="24.0" prefWidth="150.0" text="Fecha de nacimiento*" textFill="#0080ff">
+                                       <font>
+                                          <Font name="Gadugi" size="15.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="20.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <DatePicker fx:id="date" onKeyPressed="#enterdate" promptText="dd/mm/aaaa">
+                                       <VBox.margin>
+                                          <Insets left="20.0" top="5.0" />
+                                       </VBox.margin>
+                                    </DatePicker>
+                                 </children>
+                              </VBox>
+                              <Label fx:id="errordate" prefHeight="52.0" prefWidth="335.0" text="Debes ser mayor de 16 años" textFill="RED" visible="false" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="30.0" prefWidth="442.0">
+                           <children>
+                              <VBox prefHeight="50.0" prefWidth="354.0">
+                                 <children>
+                                    <Label text="Email*" textFill="#0080ff">
+                                       <font>
+                                          <Font name="Gadugi" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="email" onKeyPressed="#entermail" prefWidth="244.0" promptText="TuEmail@ejemplo.com" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </VBox>
+                              <Label fx:id="erroremail" prefHeight="67.0" prefWidth="335.0" text="Email incorrecto" textFill="RED" visible="false" wrapText="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="595.0">
+                           <children>
+                              <VBox prefHeight="46.0" prefWidth="432.0">
+                                 <children>
+                                    <Label text="Contraseña*" textFill="#0080ff">
+                                       <font>
+                                          <Font name="Gadugi" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <PasswordField fx:id="password" onKeyPressed="#enterpass" promptText="LetrasNumsSímbolos" />
+                                          <TextField fx:id="mostrarTextoContraseña" onKeyPressed="#enterpass" promptText="LetrasNumsSímbolos" />
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <Label fx:id="errorpass" prefHeight="63.0" prefWidth="415.0" text="Entre 8 y 20 caracteres, may. y minúsc., algún dígito y carácter especial" textFill="RED" visible="false" wrapText="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="48.0" prefWidth="595.0">
+                           <children>
+                              <VBox prefHeight="46.0" prefWidth="432.0">
+                                 <children>
+                                    <Label text="Repitir contraseña*" textFill="#0080ff">
+                                       <font>
+                                          <Font name="Gadugi" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <PasswordField fx:id="repeatpassword" onKeyPressed="#enter" promptText="LetrasNumsSímbolos" />
+                                          <TextField fx:id="mostrarTextPass2" onKeyPressed="#enter" promptText="LetrasNumsSímbolos" />
+                                       </children>
+                                    </StackPane>
+                                    <CheckBox fx:id="mostrarpass" mnemonicParsing="false" text="Mostrar contraseña">
+                                       <padding>
+                                          <Insets top="10.0" />
+                                       </padding>
+                                    </CheckBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <Label fx:id="errorpass2" prefHeight="66.0" prefWidth="415.0" text="Contraseña no coincide" textFill="RED" visible="false" wrapText="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Label layoutX="147.0" layoutY="61.0" text="Avatar" textFill="#0080ff">
+                     <font>
+                        <Font name="Gadugi" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button id="lion" fx:id="bAvatar" layoutX="99.0" layoutY="91.0" mnemonicParsing="false" onAction="#cambiarAvatar" prefHeight="31.0" prefWidth="138.0" stylesheets="@../stylesheet.css" text="Seleccionar" />
+                  <ImageView fx:id="avatar" fitHeight="130.0" fitWidth="130.0" layoutX="115.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/avatars/default.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="defecto" layoutX="109.0" layoutY="269.0" prefHeight="46.0" prefWidth="141.0" text="Si no elige avatar se le asignara uno por defecto" wrapText="true">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

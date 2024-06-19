@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="391.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.FXMLAyudaGeneralController">
+   <children>
+      <ImageView fitHeight="537.0" fitWidth="865.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/t0024190.jpg" />
+         </image>
+      </ImageView>
+      <Button id="lion" fx:id="atras" layoutX="356.0" layoutY="488.0" mnemonicParsing="false" onAction="#atras" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Volver al menú" />
+      <ImageView fitHeight="50.0" fitWidth="65.0" layoutX="786.0" layoutY="469.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/efw.png" />
+         </image>
+      </ImageView>
+      <TabPane id="sale" layoutX="14.0" layoutY="18.0" prefHeight="426.0" prefWidth="840.0" stylesheets="@../stylesheet.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Tu Perfil">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.14482793891014742" prefHeight="380.0" prefWidth="840.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="379.0" prefWidth="144.0" style="-fx-background-color: #E3A255;">
+                                 <children>
+                                    <ToggleButton id="sale" fx:id="data" layoutY="14.0" mnemonicParsing="false" onAction="#tuPerfilClicked" prefHeight="27.0" prefWidth="115.0" stylesheets="@../stylesheet.css" text="Tus Datos" wrapText="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="TuPerfil" />
+                                       </toggleGroup>
+                                    </ToggleButton>
+                                    <ToggleButton id="sale" fx:id="modify" layoutY="57.0" mnemonicParsing="false" onAction="#tuPerfilClicked" prefHeight="62.0" prefWidth="115.0" stylesheets="@../stylesheet.css" text="Modificar Perfil" textAlignment="CENTER" toggleGroup="$TuPerfil" wrapText="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ToggleButton>
+                                 </children>
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <Text fx:id="texto_perfil" layoutX="20.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para ver los Datos de su Perfil puede acceder de 3 maneras diferentes: pulsando en la opción &quot;Perfil&quot; en Menu&gt;Estudiante; usando el atajo de teclado que se indica Alt + P; la última opción es clicar sobre el botón con su Nickname que se encuentra debajo de su foto de perfil." textAlignment="JUSTIFY" wrappingWidth="650.0">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fx:id="imagenPerfil" fitHeight="254.0" fitWidth="542.0" layoutX="20.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/ipc4.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect></ImageView>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Manos a la obra">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.14482793891014742" prefHeight="380.0" prefWidth="840.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="379.0" prefWidth="144.0" style="-fx-background-color: #E3A255;">
+                                 <children>
+                                    <ToggleButton id="sale" fx:id="random" layoutY="14.0" mnemonicParsing="false" onAction="#ObraClicked" prefHeight="62.0" prefWidth="115.0" stylesheets="@../stylesheet.css" text="Problema aleatorio" textAlignment="CENTER" wrapText="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Obra" />
+                                       </toggleGroup>
+                                    </ToggleButton>
+                                    <ToggleButton id="sale" fx:id="plist" layoutY="76.0" mnemonicParsing="false" onAction="#ObraClicked" prefHeight="61.0" prefWidth="115.0" stylesheets="@../stylesheet.css" text="Lista de problemas" textAlignment="CENTER" toggleGroup="$Obra" wrapText="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ToggleButton>
+                                    <ToggleButton id="sale" fx:id="cartanav" layoutY="138.0" mnemonicParsing="false" onAction="#ObraClicked" prefHeight="61.0" prefWidth="115.0" stylesheets="@../stylesheet.css" text="Ver carta náutica" textAlignment="CENTER" toggleGroup="$Obra" wrapText="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ToggleButton>
+                                 </children>
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <Text fx:id="textoObra" layoutX="20.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Este botón le permite realizar un problema aleatorio de entre todos los que hay la lista de problemas. Al acabar puede elegir si realizar otro o terminar." textAlignment="JUSTIFY" wrappingWidth="650.0">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fx:id="imagenObra" fitHeight="254.0" fitWidth="542.0" layoutX="20.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/ipc6.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Al Acabar">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.14482793891014742" prefHeight="380.0" prefWidth="840.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="379.0" prefWidth="144.0" style="-fx-background-color: #E3A255;">
+                                 <children>
+                                    <ToggleButton id="sale" fx:id="ayf" layoutY="14.0" mnemonicParsing="false" onAction="#AcabarClicked" prefHeight="61.0" prefWidth="115.0" stylesheets="@../stylesheet.css" text="Aciertos y Fallos" textAlignment="CENTER" wrapText="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Acabar" />
+                                       </toggleGroup>
+                                    </ToggleButton>
+                                    <ToggleButton id="sale" fx:id="guardar" layoutY="76.0" mnemonicParsing="false" onAction="#AcabarClicked" prefHeight="61.0" prefWidth="115.0" stylesheets="@../stylesheet.css" text="Guardar Sesión" textAlignment="CENTER" toggleGroup="$Acabar" wrapText="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ToggleButton>
+                                    <ToggleButton id="sale" fx:id="combicompleta" layoutY="137.0" mnemonicParsing="false" onAction="#AcabarClicked" prefHeight="62.0" prefWidth="115.0" stylesheets="@../stylesheet.css" text="Cambiar de Usuario" textAlignment="CENTER" toggleGroup="$Acabar" wrapText="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ToggleButton>
+                                    <ToggleButton id="sale" fx:id="cerrapp" layoutX="1.0" layoutY="199.0" mnemonicParsing="false" onAction="#AcabarClicked" prefHeight="61.0" prefWidth="115.0" stylesheets="@../stylesheet.css" text="Cerrar Aplicación" textAlignment="CENTER" toggleGroup="$Acabar" wrapText="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ToggleButton>
+                                 </children>
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <Text fx:id="textoAcabar" layoutX="20.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Si desea ver sus aciertos y fallos, así como sus estadísticas, debe pulsar sobre la opción &quot;Aciertos y fallos&quot; en Menu&gt;Resultados. También puede acceder más rápido con el atajo de teclado definido: &quot;Alt + A&quot;." textAlignment="JUSTIFY" wrappingWidth="650.0">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fx:id="imagenAcabar" fitHeight="254.0" fitWidth="542.0" layoutX="20.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/ipc5.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ImageView>
+                                    <ImageView fx:id="imagenHerramientas2" fitHeight="185.0" fitWidth="59.0" layoutX="240.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

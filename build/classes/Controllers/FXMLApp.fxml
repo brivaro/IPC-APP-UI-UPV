@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.FXMLAppController">
+   <children>
+      <ImageView fitHeight="479.0" fitWidth="730.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/t0024190.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff4c" height="351.0" layoutX="72.0" layoutY="60.0" stroke="#ffffff66" strokeType="INSIDE" width="292.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cf6d3c9e" height="139.0" layoutX="519.0" layoutY="36.0" stroke="WHITE" strokeType="INSIDE" width="200.0" />
+      <MenuBar prefHeight="26.0" prefWidth="730.0">
+         <menus>
+            <Menu text="_Aplicación">
+               <items>
+                  <MenuItem fx:id="acerca" onAction="#acercaDe" text="_Acerca de">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="H" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="cerrar" onAction="#cerrarApp" text="_Cerrar">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="C" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items>
+            </Menu>
+            <Menu text="_Estudiante">
+               <items>
+                  <MenuItem fx:id="perfil" mnemonicParsing="false" onAction="#verPerfil" text="Perfil">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="P" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="bcerrarSesion" mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar sesión">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="S" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items>
+            </Menu>
+            <Menu text="_Resultados">
+               <items>
+                  <MenuItem fx:id="resultados" mnemonicParsing="false" onAction="#verResultados" text="Aciertos y fallos">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="F" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items>
+               <accelerator>
+                  <KeyCodeCombination alt="DOWN" code="E" control="UP" meta="UP" shift="UP" shortcut="UP" />
+               </accelerator>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Button id="lion" fx:id="partida" layoutX="98.0" layoutY="83.0" mnemonicParsing="false" onAction="#hacerProblemaAleatorio" onMouseMoved="#mano" prefHeight="44.0" prefWidth="182.0" stylesheets="@../stylesheet.css" text="Problema aleatorio">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Button id="lion" fx:id="partida1" layoutX="98.0" layoutY="156.0" mnemonicParsing="false" onAction="#verListaProblemas" onMouseMoved="#mano" prefHeight="44.0" prefWidth="182.0" stylesheets="@../stylesheet.css" text="Lista de problemas">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="avatar" fitHeight="114.0" fitWidth="121.0" layoutX="592.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/usuario.png" />
+         </image></ImageView>
+      <ImageView fitHeight="50.0" fitWidth="65.0" layoutX="649.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/efw.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="78.0" fitWidth="71.0" layoutX="281.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/pngwing.com.png" />
+         </image>
+      </ImageView>
+      <Button id="lion" fx:id="ayuda" layoutX="98.0" layoutY="268.0" mnemonicParsing="false" onAction="#verMapa" onMouseMoved="#mano" prefHeight="44.0" prefWidth="182.0" stylesheets="@../stylesheet.css" text="Ver carta náutica" />
+      <Button id="sale" fx:id="estudiante" layoutX="510.0" layoutY="149.0" mnemonicParsing="false" onAction="#verPerfil" onMouseMoved="#mano" prefHeight="42.0" prefWidth="206.0" stylesheets="@../stylesheet.css" text="Estudiante:" />
+      <Button id="lion" fx:id="ayuda2" layoutX="98.0" layoutY="343.0" mnemonicParsing="false" onAction="#verAyuda" onMouseMoved="#mano" prefHeight="44.0" prefWidth="182.0" stylesheets="@../stylesheet.css" text="Ayuda tripulación" />
+      <ImageView fx:id="newrecord" fitHeight="139.0" fitWidth="120.0" layoutX="507.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../icons/aaaa.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="rifa" fitHeight="88.0" fitWidth="150.0" layoutX="454.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../icons/gnt-plantillas-boletos-rifa-imprimir-gratis.jpg-840.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="emblema" fitHeight="56.0" fitWidth="92.0" layoutX="529.0" layoutY="204.0" onMouseClicked="#inf" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../icons/12.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="emblema1" fitHeight="79.0" fitWidth="52.0" layoutX="637.0" layoutY="192.0" onMouseClicked="#inf2" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../icons/11.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="65.0" fitWidth="58.0" layoutX="287.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/046-boarding.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="60.0" fitWidth="58.0" layoutX="287.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/595579.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="78.0" fitWidth="71.0" layoutX="281.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/bc169fb011d9932f1b2a56e99676ae13-mosca-gaviota-color-animal-plano.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="70.0" layoutY="229.0" prefHeight="0.0" prefWidth="294.0" />
+      <Separator layoutX="-105.0" layoutY="234.0" prefHeight="3.0" prefWidth="351.0" rotate="90.0" />
+      <Separator layoutX="70.0" layoutY="58.0" prefHeight="0.0" prefWidth="294.0" />
+      <Separator layoutX="70.0" layoutY="410.0" prefHeight="0.0" prefWidth="294.0" />
+      <Separator layoutX="189.0" layoutY="234.0" prefHeight="3.0" prefWidth="351.0" rotate="90.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.FXMLVistaController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="194.00000610351563" minHeight="41.799990844726565" prefHeight="55.79999694824218" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="194.00000610351563" minHeight="0.0" prefHeight="59.80000915527344" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="51.400000000000006" minHeight="10.0" prefHeight="39.80000000000001" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="591.1999870300293" minHeight="10.0" prefHeight="495.8" vgrow="ALWAYS" />
+  </rowConstraints>
+   <children>
+      <ScrollPane fx:id="map_scrollpane" hbarPolicy="ALWAYS" pannable="true" prefHeight="398.0" prefWidth="600.0" vbarPolicy="ALWAYS" GridPane.rowIndex="3">
+         <content>
+            <Pane fx:id="mapPane" onMouseDragged="#circuloDrag" onMousePressed="#circuloClick">
+               <children>
+                  <ImageView pickOnBounds="true">
+                     <image>
+                        <Image url="@../icons/carta_nautica.jpg" />
+                     </image>
+                  </ImageView>
+                  <MenuButton fx:id="map_pin" mnemonicParsing="false" prefHeight="60.0" prefWidth="48.0" stylesheets="@../icons/estilos.css" visible="false">
+                     <items>
+                        <MenuItem fx:id="pin_info" mnemonicParsing="false" text="Action 1" />
+                     </items>
+                     <styleClass>
+                        <String fx:value="menu-button" />
+                        <String fx:value="map-pin" />
+                     </styleClass>
+                  </MenuButton>
+                  <ImageView fx:id="trans" fitHeight="293.0" fitWidth="293.0" focusTraversable="true" layoutX="240.0" layoutY="402.0" onMouseDragged="#arrastrarTrans" onMousePressed="#marcarInicio" opacity="0.6" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../resources/resources/transportador.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </content>
+      </ScrollPane>
+      <HBox>
+         <children>
+            <ImageView fitHeight="79.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/018-map-1.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </HBox.margin>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Carta Náutica" wrappingWidth="328.78082275390625">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Papyrus" size="50.0" />
+               </font>
+            </Text>
+            <ToggleButton id="sale" fx:id="lineaBoton" mnemonicParsing="false" onMouseMoved="#mano" prefHeight="42.0" prefWidth="100.0" stylesheets="@../stylesheet.css" text="Línea">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/595579.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="trazados1" />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton id="sale" fx:id="puntoBoton" mnemonicParsing="false" onMouseMoved="#mano" prefHeight="42.0" prefWidth="100.0" stylesheets="@../stylesheet.css" text="Punto" toggleGroup="$trazados1">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/035-pin.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </ToggleButton>
+            <ToggleButton id="sale" fx:id="arcoBoton" mnemonicParsing="false" onMouseMoved="#mano" prefHeight="42.0" prefWidth="100.0" stylesheets="@../stylesheet.css" text="Arco" toggleGroup="$trazados1">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/045-gps.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </ToggleButton>
+            <ToggleButton id="sale" fx:id="textoBoton" mnemonicParsing="false" onMouseMoved="#mano" prefHeight="42.0" prefWidth="100.0" stylesheets="@../stylesheet.css" text="Texto" toggleGroup="$trazados1">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/4662616.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </ToggleButton>
+            <ToggleButton id="sale" fx:id="transBoton" mnemonicParsing="false" onAction="#verTrans" onMouseMoved="#mano" prefHeight="39.0" prefWidth="111.0" stylesheets="@../stylesheet.css" text="Ángulos">
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/4647752.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </ToggleButton>
+            <ColorPicker id="sale" fx:id="selColor" prefHeight="34.0" prefWidth="89.0" stylesheets="@../stylesheet.css">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin></ColorPicker>
+            <Slider id="sale" fx:id="grosorSlider" blockIncrement="5.0" prefHeight="39.0" prefWidth="108.0" stylesheets="@../stylesheet.css">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin></Slider>
+            <ToggleButton id="windows" fx:id="chincheta" mnemonicParsing="false" prefHeight="56.0" prefWidth="63.0" stylesheets="@../stylesheet.css" toggleGroup="$trazados1">
+               <graphic>
+                  <ImageView fx:id="foto" fitHeight="47.0" fitWidth="69.0" onMouseMoved="#mano" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/1f4cc.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </ToggleButton>
+            <SplitMenuButton id="windows" fx:id="cambio" mnemonicParsing="false" onAction="#verCambioFoto" prefHeight="40.0" prefWidth="65.0" stylesheets="@../stylesheet.css">
+               <items>
+                  <MenuItem fx:id="fchin" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView fx:id="fotochincheta" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/1f4cc.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="fes" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView fx:id="fotoestrella" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/005-navigation.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="fban" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView fx:id="fotobandera" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/020-flag.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="ftin" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView fx:id="fototimon" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/001-wheel.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="fan" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView fx:id="fotoancla" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/031-anchor.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+               </items>
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/25677.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </SplitMenuButton>
+            <Button id="sale" fx:id="limpiarBoton" mnemonicParsing="false" onAction="#limpiar" onMouseMoved="#mano" prefHeight="42.0" prefWidth="106.0" stylesheets="@../stylesheet.css" text="Limpiar">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/e5a81464ea808b2f85188b8210042a79.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button id="sale" mnemonicParsing="false" onAction="#zoomOut" prefHeight="42.0" prefWidth="40.0" stylesheets="@../stylesheet.css" text="-">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Slider id="sale" fx:id="zoom_slider" stylesheets="@../stylesheet.css">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Slider>
+            <Button id="sale" mnemonicParsing="false" onAction="#zoomIn" stylesheets="@../stylesheet.css" text="+">
+               <HBox.margin>
+                  <Insets right="5.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="42.0" stroke="BLACK" strokeType="INSIDE" width="1312.0" GridPane.rowIndex="2" />
+      <Label fx:id="error" prefHeight="36.0" prefWidth="1220.0" textFill="RED" GridPane.rowIndex="2">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="enunciado" wrapText="true" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="5.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</GridPane>

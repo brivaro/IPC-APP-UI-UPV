@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.FXMLAvatarController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: white;">
+         <top>
+            <HBox prefHeight="92.0" prefWidth="805.0" style="-fx-background-color: #0080FF;" BorderPane.alignment="CENTER_LEFT">
+               <BorderPane.margin>
+                  <Insets top="10.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccionar avatar" wrappingWidth="540.5366017818451">
+                     <font>
+                        <Font name="SansSerif Bold" size="60.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane prefHeight="71.0" prefWidth="232.0">
+                     <children>
+                        <ImageView fitHeight="67.0" fitWidth="96.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/PngItem_3943260.png" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="126.0" prefWidth="834.0">
+                     <children>
+                        <Button id="shiny" fx:id="bCancel" layoutX="57.0" layoutY="22.0" mnemonicParsing="false" onAction="#atras" onMouseDragged="#mano" onMouseMoved="#mano" prefHeight="47.0" prefWidth="150.0" style="-fx-background-color: #63C9EA;" stylesheets="@../stylesheet.css" text="Atrás" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/cancel_white.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button id="shiny" fx:id="bAccept" layoutX="454.0" layoutY="22.0" mnemonicParsing="false" onAction="#confirmarAvatar" onMouseDragged="#mano" onMouseMoved="#mano" prefHeight="42.0" prefWidth="150.0" style="-fx-background-color: #6EED1C;" stylesheets="@../stylesheet.css" text="Confirmar" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/accept_white.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Label fx:id="defecto" layoutX="301.0" layoutY="22.0" prefHeight="46.0" prefWidth="162.0" text="Si no elige avatar se le asignara uno por defecto" wrapText="true">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="50.0" fitWidth="65.0" layoutX="749.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/efw.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <AnchorPane prefHeight="165.0" prefWidth="834.0" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane layoutX="23.0" prefHeight="373.0" prefWidth="790.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <RadioButton id="lion" fx:id="option1" mnemonicParsing="false" onAction="#confirmar" onMouseDragged="#mano" stylesheets="@../stylesheet.css" text="Usar avatar">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="select" />
+                                 </toggleGroup>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                              <ImageView fx:id="image1" fitHeight="103.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/avatars/avatar1.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="1">
+                           <children>
+                              <RadioButton id="lion" fx:id="option2" mnemonicParsing="false" onAction="#confirmar" stylesheets="@../stylesheet.css" text="Usar avatar" toggleGroup="$select" />
+                              <ImageView fx:id="image2" fitHeight="84.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/avatars/avatar2.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="125.0" prefWidth="365.0" spacing="15.0" GridPane.rowIndex="1">
+                           <children>
+                              <RadioButton id="lion" fx:id="option3" mnemonicParsing="false" onAction="#confirmar" stylesheets="@../stylesheet.css" text="Usar avatar" toggleGroup="$select">
+                                 <HBox.margin>
+                                    <Insets right="2.0" />
+                                 </HBox.margin></RadioButton>
+                              <ImageView fx:id="image3" fitHeight="82.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/avatars/avatar3.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.rowIndex="2">
+                           <children>
+                              <RadioButton id="lion" fx:id="option5" mnemonicParsing="false" onAction="#confirmar" stylesheets="@../stylesheet.css" text="Usar avatar" toggleGroup="$select">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin></RadioButton>
+                              <ImageView fx:id="image5" fitHeight="84.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/avatars/default.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <RadioButton id="lion" fx:id="option4" mnemonicParsing="false" onAction="#confirmar" stylesheets="@../stylesheet.css" text="Usar avatar" toggleGroup="$select" />
+                              <ImageView fx:id="image4" fitHeight="85.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/avatars/avatar4.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="126.0" prefWidth="395.0">
+                                 <children>
+                                    <AnchorPane prefHeight="131.0" prefWidth="392.0">
+                                       <children>
+                                          <Button id="lion" fx:id="botonFotoPc" alignment="CENTER" layoutX="69.0" layoutY="14.0" mnemonicParsing="false" onAction="#elegirFotoPc" prefHeight="50.0" prefWidth="158.0" stylesheets="@../stylesheet.css" text="Seleccionar desde archivo" textAlignment="CENTER" wrapText="true" />
+                                          <ImageView fx:id="image6" fitHeight="84.0" fitWidth="84.0" layoutX="240.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" />
+                                          <Label layoutX="69.0" layoutY="64.0" prefHeight="46.0" prefWidth="160.0" text="Formatos válidos: png, jpg, gif" wrapText="true">
+                                             <font>
+                                                <Font name="System Italic" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children></VBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

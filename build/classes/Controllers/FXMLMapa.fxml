@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.FXMLMapaController">
+   <children>
+      <ImageView fx:id="fondo" fitHeight="731.0" fitWidth="1194.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/t0024190.jpg" />
+         </image>
+      </ImageView>
+      <HBox prefHeight="46.0" prefWidth="1181.0">
+         <children>
+            <MenuBar prefHeight="26.0" prefWidth="884.0">
+               <menus>
+                  <Menu text="_Aplicación">
+                     <items>
+                        <MenuItem fx:id="cerrar" mnemonicParsing="false" onAction="#cerrarApp" text="Cerrar">
+                           <accelerator>
+                              <KeyCodeCombination alt="DOWN" code="C" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                     </items>
+                  </Menu>
+                  <Menu text="_Estudiante">
+                     <items>
+                        <MenuItem fx:id="cerrarsesion" mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar sesión">
+                           <accelerator>
+                              <KeyCodeCombination alt="DOWN" code="S" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                     </items>
+                  </Menu>
+                  <Menu text="_Herramientas">
+                     <items>
+                        <MenuItem fx:id="calculadora" mnemonicParsing="false" onAction="#verCalculadora" text="Calculadora">
+                           <accelerator>
+                              <KeyCodeCombination alt="DOWN" code="K" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Ayuda">
+                     <items>
+                        <MenuItem fx:id="orientacion" mnemonicParsing="false" onAction="#verOrien" text="Orientaciones básicas">
+                           <accelerator>
+                              <KeyCodeCombination alt="DOWN" code="O" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <AnchorPane prefHeight="46.0" prefWidth="290.0">
+               <children>
+                  <Button id="sale" layoutX="61.0" layoutY="2.0" mnemonicParsing="false" onAction="#zoomOut" prefHeight="42.0" prefWidth="40.0" stylesheets="@../stylesheet.css" text="-">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Slider id="sale" fx:id="zoom_slider" layoutX="101.0" layoutY="4.0" stylesheets="@../stylesheet.css" />
+                  <Button id="sale" layoutX="241.0" layoutY="2.0" mnemonicParsing="false" onAction="#zoomIn" stylesheets="@../stylesheet.css" text="+" />
+                  <ImageView fitHeight="42.0" fitWidth="59.0" layoutX="7.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/033-binoculars.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <Button id="lion" layoutX="97.0" layoutY="678.0" mnemonicParsing="false" onAction="#verMapa" prefHeight="26.0" prefWidth="210.0" stylesheets="@../stylesheet.css" text="Ampliar mapa" />
+      <Button id="lion" fx:id="atras" layoutX="485.0" layoutY="678.0" mnemonicParsing="false" onAction="#atras" onMouseMoved="#mano" prefHeight="26.0" stylesheets="@../stylesheet.css" text="Volver al menú principal" />
+      <SplitPane dividerPositions="0.37239165329052965" layoutX="19.0" layoutY="61.0" prefHeight="607.0" prefWidth="998.0">
+         <items>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.20001220703125" minWidth="10.0" prefWidth="35.2000015258789" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="319.3999877929688" minWidth="10.0" prefWidth="319.3999877929688" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.4000244140625" minWidth="10.0" prefWidth="30.600012207031227" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="173.59998168945313" minHeight="0.0" prefHeight="47.8" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="386.4" minHeight="10.0" prefHeight="348.6" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="260.60004272460935" minHeight="10.0" prefHeight="207.00006713867185" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PROBLEMA" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Papyrus" size="25.0" />
+                     </font></Text>
+                  <Label fx:id="enunciado" prefHeight="500.0" prefWidth="300.0" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <children>
+                        <RadioButton fx:id="an1" mnemonicParsing="false" onAction="#opcion">
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="respuestasGrupo" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="an2" mnemonicParsing="false" onAction="#opcion" toggleGroup="$respuestasGrupo">
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </RadioButton>
+                        <RadioButton fx:id="an3" mnemonicParsing="false" onAction="#opcion" toggleGroup="$respuestasGrupo">
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </RadioButton>
+                        <RadioButton fx:id="an4" mnemonicParsing="false" onAction="#opcion" toggleGroup="$respuestasGrupo">
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </RadioButton>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button id="lion" fx:id="corregir" mnemonicParsing="false" onAction="#verCorreccion" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Corregir">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin></Button>
+                              <Button id="lion" fx:id="siguiente" mnemonicParsing="false" onAction="#verSiguiente" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Siguiente" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+            <ScrollPane fx:id="map_scrollpane" hbarPolicy="ALWAYS" pannable="true" prefHeight="398.0" prefWidth="555.0" vbarPolicy="ALWAYS">
+               <content>
+                  <Pane fx:id="mapPane" onMouseDragged="#circuloDrag" onMousePressed="#circuloClick">
+                     <children>
+                        <ImageView pickOnBounds="true">
+                           <image>
+                              <Image url="@../icons/carta_nautica.jpg" />
+                           </image>
+                        </ImageView>
+                        <MenuButton fx:id="map_pin" mnemonicParsing="false" prefHeight="60.0" prefWidth="48.0" stylesheets="@../icons/estilos.css" visible="false">
+                           <items>
+                              <MenuItem fx:id="pin_info" mnemonicParsing="false" text="Action 1" />
+                           </items>
+                           <styleClass>
+                              <String fx:value="menu-button" />
+                              <String fx:value="map-pin" />
+                           </styleClass>
+                        </MenuButton>
+                        <ImageView fx:id="trans" fitHeight="293.0" fitWidth="293.0" focusTraversable="true" layoutX="220.0" layoutY="382.0" onMouseDragged="#arrastrarTrans" onMousePressed="#marcarInicio" opacity="0.6" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../resources/resources/transportador.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </content>
+            </ScrollPane>
+         </items>
+      </SplitPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cf6d3c9e" height="660.0" layoutX="1020.0" layoutY="62.0" stroke="WHITE" strokeType="INSIDE" width="146.0" />
+      <ToggleButton id="sale" fx:id="lineaBoton" layoutX="1045.0" layoutY="213.0" mnemonicParsing="false" onMouseMoved="#mano" prefHeight="42.0" prefWidth="100.0" stylesheets="@../stylesheet.css" text="Línea">
+         <toggleGroup>
+            <ToggleGroup fx:id="trazados" />
+         </toggleGroup>
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/595579.png" />
+               </image>
+            </ImageView>
+         </graphic></ToggleButton>
+      <ColorPicker id="sale" fx:id="selColor" layoutX="1051.0" layoutY="485.0" prefHeight="42.0" prefWidth="80.0" stylesheets="@../stylesheet.css" />
+      <ToggleButton id="sale" fx:id="arcoBoton" layoutX="1045.0" layoutY="303.0" mnemonicParsing="false" onMouseMoved="#mano" prefHeight="42.0" prefWidth="100.0" stylesheets="@../stylesheet.css" text="Arco" toggleGroup="$trazados">
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/045-gps.png" />
+               </image>
+            </ImageView>
+         </graphic></ToggleButton>
+      <ToggleButton id="sale" fx:id="puntoBoton" layoutX="1045.0" layoutY="258.0" mnemonicParsing="false" onMouseMoved="#mano" prefHeight="42.0" prefWidth="100.0" stylesheets="@../stylesheet.css" text="Punto" toggleGroup="$trazados">
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/035-pin.png" />
+               </image>
+            </ImageView>
+         </graphic></ToggleButton>
+      <ToggleButton id="sale" fx:id="textoBoton" layoutX="1044.0" layoutY="348.0" mnemonicParsing="false" onMouseMoved="#mano" prefHeight="42.0" prefWidth="100.0" stylesheets="@../stylesheet.css" text="Texto" toggleGroup="$trazados">
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/4662616.png" />
+               </image>
+            </ImageView>
+         </graphic></ToggleButton>
+      <Text layoutX="1062.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trazados">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="1044.0" layoutY="473.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Color y grosor">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Slider id="sale" fx:id="grosorSlider" blockIncrement="5.0" layoutX="1038.0" layoutY="528.0" prefHeight="39.0" prefWidth="108.0" stylesheets="@../stylesheet.css" />
+      <ImageView fx:id="avatar" fitHeight="99.0" fitWidth="108.0" layoutX="1040.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" />
+      <Button id="sale" fx:id="limpiarBoton" layoutX="1039.0" layoutY="668.0" mnemonicParsing="false" onAction="#limpiar" onMouseMoved="#mano" prefHeight="42.0" prefWidth="106.0" stylesheets="@../stylesheet.css" text="Limpiar">
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/e5a81464ea808b2f85188b8210042a79.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Separator layoutX="1020.0" layoutY="444.0" prefHeight="5.0" prefWidth="146.0" />
+      <Separator layoutX="1018.0" layoutY="575.0" prefHeight="5.0" prefWidth="146.0" />
+      <Separator layoutX="1021.0" layoutY="179.0" prefHeight="6.0" prefWidth="146.0" />
+      <ToggleButton id="windows" fx:id="chincheta" layoutX="1030.0" layoutY="588.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="63.0" stylesheets="@../stylesheet.css" toggleGroup="$trazados">
+         <graphic>
+            <ImageView fx:id="foto" fitHeight="47.0" fitWidth="69.0" onMouseMoved="#mano" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/1f4cc.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ToggleButton>
+      <Separator layoutX="1018.0" layoutY="651.0" prefHeight="5.0" prefWidth="146.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="22.0" layoutX="19.0" layoutY="38.0" stroke="BLACK" strokeType="INSIDE" width="865.0" />
+      <Label fx:id="error" layoutX="29.0" layoutY="38.0" prefHeight="22.0" prefWidth="848.0" textFill="RED">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <SplitMenuButton id="windows" fx:id="cambio" layoutX="1089.0" layoutY="596.0" mnemonicParsing="false" onAction="#verCambioFoto" prefHeight="40.0" prefWidth="65.0" stylesheets="@../stylesheet.css">
+        <items>
+          <MenuItem fx:id="fchin" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fx:id="fotochincheta" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/1f4cc.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MenuItem>
+          <MenuItem fx:id="fes" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fx:id="fotoestrella" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/005-navigation.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MenuItem>
+            <MenuItem fx:id="fban" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fx:id="fotobandera" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/020-flag.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MenuItem>
+            <MenuItem fx:id="ftin" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fx:id="fototimon" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/001-wheel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MenuItem>
+            <MenuItem fx:id="fan" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fx:id="fotoancla" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/031-anchor.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MenuItem>
+        </items>
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/25677.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <DropShadow />
+         </effect>
+      </SplitMenuButton>
+      <ToggleButton id="sale" fx:id="transBoton" layoutX="1039.0" layoutY="394.0" mnemonicParsing="false" onAction="#verTrans" onMouseMoved="#mano" prefHeight="39.0" prefWidth="110.0" stylesheets="@../stylesheet.css" text="Ángulos">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/4647752.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </ToggleButton>
+   </children>
+</AnchorPane>
