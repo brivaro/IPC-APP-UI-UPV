@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="391.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.FXMLAyudaMapController">
+   <children>
+      <ImageView fitHeight="537.0" fitWidth="865.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/t0024190.jpg" />
+         </image>
+      </ImageView>
+      <Button id="lion" fx:id="atras" layoutX="327.0" layoutY="488.0" mnemonicParsing="false" onAction="#atras" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Volver a la carta náutica" />
+      <ImageView fitHeight="50.0" fitWidth="65.0" layoutX="786.0" layoutY="469.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/efw.png" />
+         </image>
+      </ImageView>
+      <TabPane id="sale" layoutX="14.0" layoutY="19.0" prefHeight="425.0" prefWidth="840.0" stylesheets="@../stylesheet.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Trazados">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.14482793891014742" prefHeight="380.0" prefWidth="840.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="379.0" prefWidth="144.0" style="-fx-background-color: #E3A255;">
+                                 <children>
+                                    <ToggleButton id="sale" fx:id="comoDibujarB" layoutY="14.0" mnemonicParsing="false" onAction="#trazadosClicked" prefHeight="27.0" prefWidth="115.0" stylesheets="@../stylesheet.css" text="Dibujar">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="trazados" />
+                                       </toggleGroup>
+                                    </ToggleButton>
+                                    <ToggleButton id="sale" fx:id="lineaB" layoutY="57.0" mnemonicParsing="false" onAction="#trazadosClicked" prefHeight="27.0" prefWidth="115.0" stylesheets="@../stylesheet.css" text="Línea" toggleGroup="$trazados">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ToggleButton>
+                                    <ToggleButton id="sale" fx:id="puntoB" layoutY="100.0" mnemonicParsing="false" onAction="#trazadosClicked" prefHeight="27.0" prefWidth="115.0" stylesheets="@../stylesheet.css" text="Punto" toggleGroup="$trazados">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ToggleButton>
+                                    <ToggleButton id="sale" fx:id="arcoB" layoutY="143.0" mnemonicParsing="false" onAction="#trazadosClicked" prefHeight="43.0" prefWidth="115.0" stylesheets="@../stylesheet.css" text="Arco" toggleGroup="$trazados">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ToggleButton>
+                                    <ToggleButton id="sale" fx:id="textoB" layoutY="186.0" mnemonicParsing="false" onAction="#trazadosClicked" prefHeight="43.0" prefWidth="115.0" stylesheets="@../stylesheet.css" text="Texto" toggleGroup="$trazados">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ToggleButton>
+                                    <ToggleButton id="sale" fx:id="angulosB" layoutY="229.0" mnemonicParsing="false" onAction="#trazadosClicked" prefHeight="43.0" prefWidth="115.0" stylesheets="@../stylesheet.css" text="Ángulos" toggleGroup="$trazados">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ToggleButton>
+                                    <ToggleButton id="sale" fx:id="limpiarB" layoutX="1.0" layoutY="272.0" mnemonicParsing="false" onAction="#trazadosClicked" prefHeight="43.0" prefWidth="115.0" stylesheets="@../stylesheet.css" text="Limpiar" toggleGroup="$trazados">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ToggleButton>
+                                 </children>
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <Text fx:id="texto_trazado" layoutX="20.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para poder Dibujar, primero, escogeremos mediante el apartado &quot;Color y grosor&quot; el grosor y el color del elemento a dibujar. A continuación pulsaremos cualquiera de las opciones posibles." textAlignment="JUSTIFY" wrappingWidth="650.0">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fx:id="imagenTrazados" fitHeight="182.0" fitWidth="178.0" layoutX="20.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/Trazados.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect></ImageView>
+                                    <Text fx:id="textoTrazados2" layoutX="222.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="448.0">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Color y Grosor">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.14482793891014742" prefHeight="380.0" prefWidth="840.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="379.0" prefWidth="144.0" style="-fx-background-color: #E3A255;">
+                                 <children>
+                                    <ToggleButton id="sale" fx:id="colorB" layoutY="14.0" mnemonicParsing="false" onAction="#colYGrosClicked" prefHeight="27.0" prefWidth="115.0" stylesheets="@../stylesheet.css" text="Color">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="colorYGrosor" />
+                                       </toggleGroup>
+                                    </ToggleButton>
+                                    <ToggleButton id="sale" fx:id="grosorB" layoutY="57.0" mnemonicParsing="false" onAction="#colYGrosClicked" prefHeight="27.0" prefWidth="115.0" stylesheets="@../stylesheet.css" text="Grosor" toggleGroup="$colorYGrosor">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ToggleButton>
+                                 </children>
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <Text fx:id="textoColYGros" layoutX="20.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Esta primera opción permite definir el color de los elementos a dibujar en el mapa. Si haces click en esta opción, se abre un desplegable con muchos colores a elegir. Luego de elegir el color, si dibujas cualquier elemento del apartado trazados, este será del color escogido. También puedes escoger un color &quot;PERSONALIZADO&quot;." textAlignment="JUSTIFY" wrappingWidth="650.0">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fx:id="imagenColYGros" fitHeight="182.0" fitWidth="178.0" layoutX="20.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/Color.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Herramientas">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.14482793891014742" prefHeight="380.0" prefWidth="840.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="379.0" prefWidth="144.0" style="-fx-background-color: #E3A255;">
+                                 <children>
+                                    <ToggleButton id="sale" fx:id="calculadoraB" layoutY="14.0" mnemonicParsing="false" onAction="#herramientasClicked" prefHeight="27.0" prefWidth="115.0" stylesheets="@../stylesheet.css" text="Calculadora">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="herramientas" />
+                                       </toggleGroup>
+                                    </ToggleButton>
+                                    <ToggleButton id="sale" fx:id="zoomB" layoutY="57.0" mnemonicParsing="false" onAction="#herramientasClicked" prefHeight="27.0" prefWidth="115.0" stylesheets="@../stylesheet.css" text="Zoom" toggleGroup="$herramientas">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ToggleButton>
+                                    <ToggleButton id="sale" fx:id="iconosB" layoutX="1.0" layoutY="100.0" mnemonicParsing="false" onAction="#herramientasClicked" prefHeight="27.0" prefWidth="115.0" stylesheets="@../stylesheet.css" text="Iconos" toggleGroup="$herramientas">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ToggleButton>
+                                 </children>
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <Text fx:id="textoHerramientas" layoutX="20.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KartoApp tiene su propia CALCULADORA para realizar todo tipo de operaciones básicas. Para acceder a la calculadora, tan solo debes dirigirte a la barra de herramientas de arriba de la aplicación y en el apartado &quot;Herramientas&quot; encontrarás la opción &quot;Calculadora&quot;." textAlignment="JUSTIFY" wrappingWidth="650.0">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fx:id="imagenHerramientas" fitHeight="182.0" fitWidth="178.0" layoutX="20.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/Calculadora.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ImageView>
+                                    <ImageView fx:id="imagenHerramientas2" fitHeight="185.0" fitWidth="59.0" layoutX="240.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Problemas">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.14482793891014742" prefHeight="380.0" prefWidth="840.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="379.0" prefWidth="144.0" style="-fx-background-color: #E3A255;">
+                                 <children>
+                                    <ToggleButton id="sale" fx:id="problemasB" layoutY="14.0" mnemonicParsing="false" onAction="#problemasClicked" prefHeight="27.0" prefWidth="115.0" stylesheets="@../stylesheet.css" text="Problemas">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="problemas" />
+                                       </toggleGroup>
+                                    </ToggleButton>
+                                    <ToggleButton id="sale" fx:id="guardarSesB" layoutX="1.0" layoutY="57.0" mnemonicParsing="false" onAction="#problemasClicked" prefHeight="63.0" prefWidth="115.0" stylesheets="@../stylesheet.css" text="Guardar Sesión" textAlignment="CENTER" toggleGroup="$problemas" wrapText="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ToggleButton>
+                                 </children>
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <Text fx:id="textoProblemas" layoutX="20.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En esta pantalla podrás realizar los distintos problemas que hayas escogido mediante la &quot;Lista de Problemas&quot; o mediante la opción de &quot;Problema Aleatorio&quot;. Puedes escoger la opción que veas correcta y al apretar el botón &quot;Corregir&quot;, se mostrará el resultado correcto. Del mismo modo, podrás descansar volviendo al menú principal o seguir con más problemas pulsando la opción &quot;Siguiente&quot;." textAlignment="JUSTIFY" wrappingWidth="650.0">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fx:id="imagenProblemas" fitHeight="187.0" fitWidth="261.0" layoutX="14.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/Problema.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

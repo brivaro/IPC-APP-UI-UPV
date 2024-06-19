@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="391.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.FXMLListaProblemasController">
+   <children>
+      <ImageView fitHeight="537.0" fitWidth="865.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/t0024190.jpg" />
+         </image>
+      </ImageView>
+      <Button id="lion" fx:id="atras" layoutX="327.0" layoutY="488.0" mnemonicParsing="false" onAction="#atras" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Volver al menú principal" />
+      <MenuBar prefHeight="26.0" prefWidth="865.0">
+         <menus>
+            <Menu text="_Aplicación">
+               <items>
+                  <MenuItem fx:id="cerrar" mnemonicParsing="false" onAction="#cerrarApp" text="Cerrar">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="C" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items>
+            </Menu>
+            <Menu text="_Estudiante">
+               <items>
+                  <MenuItem fx:id="cerrarsesion" mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar sesión">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="S" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <ImageView fitHeight="50.0" fitWidth="65.0" layoutX="786.0" layoutY="469.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/efw.png" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="163.0" layoutY="33.0" prefHeight="446.0" prefWidth="551.0">
+         <content>
+            <VBox prefHeight="10000.0">
+               <children>
+                  <TitledPane expanded="false" prefWidth="535.0" text="Problema 1" wrapText="true">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="500.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="406.0" prefWidth="530.0">
+                                 <children>
+                                    <Label fx:id="label1" prefHeight="386.0" prefWidth="530.0" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets left="40.0" right="45.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button id="lion" fx:id="select1" mnemonicParsing="false" onAction="#enunciado1" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Hacer problema" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane expanded="false" prefWidth="535.0" text="Problema 2" wrapText="true">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="500.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="406.0" prefWidth="530.0">
+                                 <children>
+                                    <Label fx:id="label11" prefHeight="386.0" prefWidth="530.0" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets left="40.0" right="45.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button id="lion" fx:id="select11" mnemonicParsing="false" onAction="#enunciado2" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Hacer problema" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane expanded="false" prefWidth="535.0" text="Problema 3" wrapText="true">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="500.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="406.0" prefWidth="530.0">
+                                 <children>
+                                    <Label fx:id="label12" prefHeight="386.0" prefWidth="530.0" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets left="40.0" right="45.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button id="lion" fx:id="select12" mnemonicParsing="false" onAction="#enunciado3" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Hacer problema" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane expanded="false" prefWidth="535.0" text="Problema 4" wrapText="true">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="500.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="406.0" prefWidth="530.0">
+                                 <children>
+                                    <Label fx:id="label13" prefHeight="386.0" prefWidth="530.0" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets left="40.0" right="45.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button id="lion" fx:id="select13" mnemonicParsing="false" onAction="#enunciado4" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Hacer problema" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane expanded="false" prefWidth="535.0" text="Problema 5" wrapText="true">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="500.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="406.0" prefWidth="530.0">
+                                 <children>
+                                    <Label fx:id="label131" prefHeight="386.0" prefWidth="530.0" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets left="40.0" right="45.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button id="lion" fx:id="select131" mnemonicParsing="false" onAction="#enunciado5" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Hacer problema" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane expanded="false" prefWidth="535.0" text="Problema 6" wrapText="true">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="500.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="406.0" prefWidth="530.0">
+                                 <children>
+                                    <Label fx:id="label132" prefHeight="386.0" prefWidth="530.0" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets left="40.0" right="45.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button id="lion" fx:id="select132" mnemonicParsing="false" onAction="#enunciado6" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Hacer problema" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane expanded="false" prefWidth="535.0" text="Problema 7" wrapText="true">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="500.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="406.0" prefWidth="530.0">
+                                 <children>
+                                    <Label fx:id="label133" prefHeight="386.0" prefWidth="530.0" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets left="40.0" right="45.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button id="lion" fx:id="select133" mnemonicParsing="false" onAction="#enunciado7" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Hacer problema" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane expanded="false" prefWidth="535.0" text="Problema 8" wrapText="true">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="500.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="406.0" prefWidth="530.0">
+                                 <children>
+                                    <Label fx:id="label134" prefHeight="386.0" prefWidth="530.0" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets left="40.0" right="45.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button id="lion" fx:id="select134" mnemonicParsing="false" onAction="#enunciado8" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Hacer problema" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane expanded="false" prefWidth="535.0" text="Problema 9" wrapText="true">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="500.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="406.0" prefWidth="530.0">
+                                 <children>
+                                    <Label fx:id="label135" prefHeight="386.0" prefWidth="530.0" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets left="40.0" right="45.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button id="lion" fx:id="select135" mnemonicParsing="false" onAction="#enunciado9" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Hacer problema" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane expanded="false" prefWidth="535.0" text="Problema 10" wrapText="true">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="500.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="406.0" prefWidth="530.0">
+                                 <children>
+                                    <Label fx:id="label136" prefHeight="386.0" prefWidth="530.0" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets left="40.0" right="45.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button id="lion" fx:id="select136" mnemonicParsing="false" onAction="#enunciado10" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Hacer problema" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane expanded="false" prefWidth="535.0" text="Problema 11" wrapText="true">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="500.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="406.0" prefWidth="530.0">
+                                 <children>
+                                    <Label fx:id="label137" prefHeight="386.0" prefWidth="530.0" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets left="40.0" right="45.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button id="lion" fx:id="select137" mnemonicParsing="false" onAction="#enunciado11" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Hacer problema" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane expanded="false" prefWidth="535.0" text="Problema 12" wrapText="true">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="500.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="406.0" prefWidth="530.0">
+                                 <children>
+                                    <Label fx:id="label138" prefHeight="386.0" prefWidth="530.0" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets left="40.0" right="45.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button id="lion" fx:id="select138" mnemonicParsing="false" onAction="#enunciado12" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Hacer problema" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane expanded="false" prefWidth="535.0" text="Problema 13" wrapText="true">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="500.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="406.0" prefWidth="530.0">
+                                 <children>
+                                    <Label fx:id="label139" prefHeight="386.0" prefWidth="530.0" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets left="40.0" right="45.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button id="lion" fx:id="select139" mnemonicParsing="false" onAction="#enunciado13" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Hacer problema" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane expanded="false" prefWidth="535.0" text="Problema 14" wrapText="true">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="500.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="406.0" prefWidth="530.0">
+                                 <children>
+                                    <Label fx:id="label1310" prefHeight="386.0" prefWidth="530.0" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets left="40.0" right="45.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button id="lion" fx:id="select1310" mnemonicParsing="false" onAction="#enunciado14" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Hacer problema" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane expanded="false" prefWidth="535.0" text="Problema 15" wrapText="true">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="500.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="406.0" prefWidth="530.0">
+                                 <children>
+                                    <Label fx:id="label1311" prefHeight="386.0" prefWidth="530.0" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets left="40.0" right="45.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button id="lion" fx:id="select1311" mnemonicParsing="false" onAction="#enunciado15" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Hacer problema" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane expanded="false" prefWidth="535.0" text="Problema 16" wrapText="true">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="500.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="406.0" prefWidth="530.0">
+                                 <children>
+                                    <Label fx:id="label1312" prefHeight="386.0" prefWidth="530.0" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets left="40.0" right="45.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button id="lion" fx:id="select1312" mnemonicParsing="false" onAction="#enunciado16" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Hacer problema" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane expanded="false" prefWidth="535.0" text="Problema 17" wrapText="true">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="500.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="406.0" prefWidth="530.0">
+                                 <children>
+                                    <Label fx:id="label1313" prefHeight="386.0" prefWidth="530.0" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets left="40.0" right="45.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button id="lion" fx:id="select1313" mnemonicParsing="false" onAction="#enunciado17" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Hacer problema" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane expanded="false" prefWidth="535.0" text="Problema 18" wrapText="true">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="500.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="406.0" prefWidth="530.0">
+                                 <children>
+                                    <Label fx:id="label1314" prefHeight="386.0" prefWidth="530.0" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets left="40.0" right="45.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button id="lion" fx:id="select1314" mnemonicParsing="false" onAction="#enunciado18" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Hacer problema" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TitledPane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

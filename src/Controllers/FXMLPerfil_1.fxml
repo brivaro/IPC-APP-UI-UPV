@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.Perfil_1Controller">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: white;">
+         <top>
+            <HBox style="-fx-background-color: #0080FF;" BorderPane.alignment="CENTER_LEFT">
+               <BorderPane.margin>
+                  <Insets top="10.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+               <children>
+                  <Text fx:id="perfilde" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Estudiante" wrappingWidth="342.93671774864197">
+                     <font>
+                        <Font name="SansSerif Bold" size="60.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane prefHeight="71.0" prefWidth="261.0">
+                     <children>
+                        <ImageView fitHeight="67.0" fitWidth="96.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/PngItem_3943260.png" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="100.0" prefWidth="839.0">
+                     <children>
+                        <Button id="shiny" fx:id="bCancel" layoutX="344.0" layoutY="28.0" mnemonicParsing="false" onAction="#atras" onMouseMoved="#mano" prefHeight="42.0" prefWidth="150.0" style="-fx-background-color: #63C9EA;" stylesheets="@../stylesheet.css" text="Atrás" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/cancel_white.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <ImageView fitHeight="50.0" fitWidth="65.0" layoutX="756.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/efw.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="839.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0084ff00" height="150.0" layoutX="124.0" layoutY="11.0" stroke="#0088ff49" strokeType="INSIDE" width="646.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="28.0" layoutX="235.0" layoutY="146.0" stroke="TRANSPARENT" strokeType="INSIDE" width="29.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="143.0" layoutX="73.0" layoutY="23.0" stroke="TRANSPARENT" strokeType="INSIDE" width="69.0" />
+                  <Label layoutX="324.0" layoutY="30.0" prefHeight="24.0" prefWidth="80.0" text="Nombre:" textFill="#0080ff">
+                     <font>
+                        <Font name="Gadugi" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="324.0" layoutY="92.0" prefHeight="24.0" prefWidth="156.0" text="Fecha de nacimiento:" textFill="#0080ff">
+                     <font>
+                        <Font name="Gadugi" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="324.0" layoutY="62.0" prefHeight="24.0" prefWidth="67.0" text="Email:" textFill="#0080ff">
+                     <font>
+                        <Font name="Gadugi" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="324.0" layoutY="122.0" prefHeight="24.0" prefWidth="97.0" text="Contraseña:" textFill="#0080ff">
+                     <font>
+                        <Font name="Gadugi" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="avatar" fitHeight="150.0" fitWidth="200.0" layoutX="97.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Button id="lion" fx:id="modif" layoutX="94.0" layoutY="144.0" mnemonicParsing="false" onAction="#modificarPerfil" onMouseMoved="#mano" stylesheets="@../stylesheet.css" text="Modificar perfil" />
+                  <Label fx:id="email" layoutX="499.0" layoutY="62.0" prefHeight="24.0" prefWidth="242.0" textFill="#0080ff">
+                     <font>
+                        <Font name="Gadugi" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="name" layoutX="499.0" layoutY="30.0" prefHeight="24.0" prefWidth="240.0" textFill="#0080ff">
+                     <font>
+                        <Font name="Gadugi" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="date" layoutX="499.0" layoutY="92.0" prefHeight="24.0" prefWidth="227.0" textFill="#0080ff">
+                     <font>
+                        <Font name="Gadugi" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pass" layoutX="499.0" layoutY="122.0" prefHeight="24.0" prefWidth="234.0" textFill="#0080ff">
+                     <font>
+                        <Font name="Gadugi" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
