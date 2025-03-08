@@ -1,5 +1,5 @@
 # IPC_App_Interface
-La aplicación propuesta es una herramienta diseñada específicamente para estudiantes de navegación de barcos que deseen estudiar y prepararse para sus exámenes. 
+La aplicación propuesta es una herramienta diseñada específicamente para estudiantes de navegación de barcos que deseen estudiar y prepararse para sus exámenes. Importar el proyecto en Apache NetBeans IDE 12.4. Se usa Scene Builder para construir la UI.
 
 ![image](https://github.com/brivaro/IPC_App_Interface/assets/103451491/cc23a585-35a8-4bc6-add2-826d7aa78273)
 
